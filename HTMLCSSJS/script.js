@@ -101,4 +101,24 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('load', () => img.classList.add('loaded'));
     }
   });
+
+  // Footer subscribe (non-persistent demo)
+  const subForm = document.getElementById('footer-subscribe');
+  if (subForm) {
+    subForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const email = (subForm.querySelector('input[name="email"]').value || '').trim();
+      if (!email) {
+        alert('Please enter an email address.');
+        return;
+      }
+      // very light validation
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      alert(`Thanks! We'll keep you updated at ${email}.`);
+      subForm.reset();
+    });
+  }
 });

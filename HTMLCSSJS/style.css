@@ -295,14 +295,6 @@ main {
   gap: 1rem;
 }
 
-.menu-item {
-  display: flex;
-  gap: .75rem;
-  align-items: center;
-  padding: .75rem;
-  border-radius: 10px;
-}
-
 .menu-item img {
   width: 110px;
   height: 110px;
@@ -353,14 +345,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem 1.5rem;
   }
-}
-
-.menu-item img {
-  width: 88px;
-  height: 88px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .menu-item h4 {
